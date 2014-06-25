@@ -94,7 +94,9 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             for (var i = 0; i < checkioInput.length; i++) {
                 var $tr = $("<tr></tr>");
                 var c = checkioInput[i];
-                if (c.lastIndexOf("PUSH", 0)) {
+                console.log(c);
+                console.log(c.lastIndexOf("PUSH", 0));
+                if (c.lastIndexOf("PUSH", 0) === 0) {
                     var ch = c.split(" ")[1];
                     queue.push(ch);
                 }
