@@ -8,29 +8,95 @@ Each test is dict with
 """
 
 
+def letter_queue(commands):
+    return ""
+
+
+if __name__ == '__main__':
+    #These "asserts" using only for self-checking and not necessary for auto-testing
+    assert letter_queue(["PUSH A", "POP", "POP", "PUSH Z", "PUSH D", "PUSH O", "POP", "PUSH T"]) == "DOT", "dot example"
+    assert letter_queue(["POP", "POP"]) == "", "Pop, Pop, empty"
+    assert letter_queue(["PUSH H", "PUSH I"]) == "HI", "Hi!"
+    assert letter_queue([]) == "", "Nothing"
+
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": ["PUSH A", "POP", "POP", "PUSH Z", "PUSH D", "PUSH O", "POP", "PUSH T"],
+            "answer": "DOT",
+            "explanation": ""
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
-        }
+            "input": ["POP", "POP"],
+            "answer": "",
+            "explanation": ""
+        },
+        {
+            "input": ["PUSH H", "PUSH I"],
+            "answer": "HI",
+            "explanation": ""
+        },
+        {
+            "input": [],
+            "answer": "",
+            "explanation": ""
+        },
+
+    ],
+    "Edge": [
+        {
+            "input": ["POP"],
+            "answer": "",
+        },
+        {
+            "input": ["PUSH Z"],
+            "answer": "Z",
+        },
+        {
+            "input": ['PUSH A', 'PUSH B', 'PUSH C', 'PUSH D', 'PUSH E', 'PUSH F', 'PUSH G', 'PUSH H', 'PUSH I',
+                      'PUSH J', 'PUSH K', 'PUSH L', 'PUSH M', 'PUSH N', 'PUSH O', 'PUSH P', 'PUSH Q', 'PUSH R',
+                      'PUSH S', 'PUSH T', 'PUSH U', 'PUSH V', 'PUSH W', 'PUSH X', 'PUSH Y', 'PUSH Z'],
+            "answer": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        },
+        {
+            "input": ['PUSH A', 'PUSH B', 'PUSH C', 'PUSH D', "POP", 'PUSH E', 'PUSH F', 'PUSH G', 'PUSH H', "POP",
+                      'PUSH I', 'PUSH J', 'PUSH K', 'PUSH L', "POP", "POP", 'PUSH M', 'PUSH N', 'PUSH O', 'PUSH P',
+                      'PUSH Q', 'PUSH R', 'PUSH S', 'PUSH T', 'PUSH U', 'PUSH V', 'PUSH W', 'PUSH X', 'PUSH Y',
+                      'PUSH Z'],
+            "answer": "ABCEFGIJMNOPQRSTUVWXYZ",
+        },
     ],
     "Extra": [
         {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
+            "input": ['PUSH X', 'POP', 'POP', 'POP', 'POP', 'PUSH J', 'PUSH V', 'PUSH J', 'PUSH H', 'POP', 'PUSH H',
+                      'PUSH M', 'POP', 'PUSH K', 'PUSH T'],
+            "answer": "JHHMKT"
         },
         {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
-        }
+            "input": ['PUSH C', 'PUSH B'],
+            "answer": "CB"
+        },
+        {
+            "input": ['POP', 'PUSH S', 'POP', 'PUSH X', 'PUSH U', 'POP', 'POP', 'PUSH X', 'POP', 'POP', 'PUSH Z',
+                      'PUSH G', 'POP', 'PUSH F', 'PUSH M', 'PUSH I', 'POP', 'POP', 'POP', 'PUSH S', 'POP', 'POP',
+                      'PUSH S', 'PUSH E', 'POP', 'POP', 'PUSH E'],
+            "answer": "E"
+        },
+        {
+            "input": ['PUSH U', 'POP', 'PUSH B', 'PUSH O', 'PUSH G', 'POP', 'POP', 'PUSH R', 'POP', 'POP', 'POP',
+                      'PUSH J', 'PUSH N', 'PUSH D', 'PUSH V', 'POP', 'PUSH S', 'POP', 'PUSH P'],
+            "answer": "DVSP"
+        },
+        {
+            "input": ['PUSH B', 'PUSH H', 'PUSH H', 'PUSH U', 'PUSH G', 'POP', 'PUSH S', 'POP', 'PUSH O', 'POP',
+                      'PUSH C', 'POP', 'PUSH L', 'PUSH A', 'POP', 'PUSH C'],
+            "answer": "SOCLAC"
+        },
+        {
+            "input": ['POP', 'POP', 'PUSH B', 'POP', 'POP', 'PUSH Q', 'PUSH S', 'POP', 'POP', 'POP', 'POP', 'POP',
+                      'PUSH Y', 'PUSH T', 'PUSH P', 'PUSH Y', 'PUSH O', 'PUSH N', 'POP', 'POP', 'PUSH M', 'PUSH U',
+                      'POP', 'PUSH N', 'PUSH P', 'PUSH R', 'PUSH U', 'PUSH J', 'PUSH X'],
+            "answer": "YONMUNPRUJX"
+        },
     ]
 }
