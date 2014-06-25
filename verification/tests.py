@@ -63,7 +63,7 @@ TESTS = {
                       'PUSH I', 'PUSH J', 'PUSH K', 'PUSH L', "POP", "POP", 'PUSH M', 'PUSH N', 'PUSH O', 'PUSH P',
                       'PUSH Q', 'PUSH R', 'PUSH S', 'PUSH T', 'PUSH U', 'PUSH V', 'PUSH W', 'PUSH X', 'PUSH Y',
                       'PUSH Z'],
-            "answer": "ABCEFGIJMNOPQRSTUVWXYZ",
+            "answer": "EFGHIJKLMNOPQRSTUVWXYZ",
         },
     ],
     "Extra": [
