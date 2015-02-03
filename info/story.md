@@ -7,4 +7,4 @@ In a FIFO data structure, the first element added to the queue will be the first
 This is equivalent to the requirement that once a new element is added, all elements that were added before have to
 be removed before the new element can be removed.
 
-We will continue our literacy lessons for robots and will use familiar for them structure - queue. 
+We will continue our literacy lessons for robots and will use familiar for them structure - queue.

@@ -20,9 +20,3 @@ which remain in the queue in one word from the front to the rear of the queue.</
 | PUSH O  | ZDO   |
 | POP     | DO    |
 | PUSH T  | DOT   | The result
-
-
-<p>
-    <strong>Precondition:</strong><br>
-    
-</p>
