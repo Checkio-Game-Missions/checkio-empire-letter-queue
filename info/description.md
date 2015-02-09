@@ -6,7 +6,7 @@ We will emulate the queue process with letters. You are given a sequence of comm
 The queue can only contain letters.
 
 You should process all commands and assemble letters 
-which remain in the queue in one word from the front to the rear of the queue.</p>
+which remain in the queue in one word from the front to the back of the queue.
 
     ["PUSH A", "POP", "POP", "PUSH Z", "PUSH D", "PUSH O", "POP", "PUSH T"]
 
