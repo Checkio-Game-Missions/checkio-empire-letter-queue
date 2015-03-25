@@ -10,5 +10,5 @@ api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
-        function_name="letter_queue"
+        DEFAULT_FUNCTION_NAME="letter_queue"
     ).on_ready)

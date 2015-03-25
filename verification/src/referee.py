@@ -11,9 +11,9 @@ cover = """def cover(func, data):
 
 class Referee(RefereeBase):
     TESTS = TESTS
-    EXECUTABLE_PATH = settings.EXECUTABLE_PATH
-    CURRENT_ENV = settings_env.CURRENT_ENV
-    FUNCTION_NAME = "letter_queue"
+    ENVIRONMENTS = settings_env.ENVIRONMENTS
+
+    DEFAULT_FUNCTION_NAME = "letter_queue"
     ENV_COVERCODE = {
         "python_2": cover,
         "python_3": cover,
