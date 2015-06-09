@@ -8,10 +8,10 @@ The queue can only contain letters.
 You should process all commands and assemble letters 
 which remain in the queue in one word from the front to the back of the queue.
 
-    ["PUSH A", "POP", "POP", "PUSH Z", "PUSH D", "PUSH O", "POP", "PUSH T"]
+`["PUSH A", "POP", "POP", "PUSH Z", "PUSH D", "PUSH O", "POP", "PUSH T"]`
 
 | Command | Queue | Note
-|---------|-------|------
+|:-------:|:-----:|:----:
 | PUSH A  | A     | Added "A" in the empty queue
 | POP     |       | Removed "A"
 | POP     |       | The queue is empty already
