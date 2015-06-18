@@ -1,12 +1,8 @@
-from checkio_referee import RefereeBase, representations
+from checkio_referee import RefereeBase, representations, covercodes, ENV_NAME
 
 
 import settings_env
 from tests import TESTS
-
-cover = """def cover(f, data):
-    return f(tuple(str(x) for x in data))
-"""
 
 
 class Referee(RefereeBase):
@@ -14,13 +10,14 @@ class Referee(RefereeBase):
     ENVIRONMENTS = settings_env.ENVIRONMENTS
 
     DEFAULT_FUNCTION_NAME = "letter_queue"
+
+    FUNCTION_NAMES = {
+        ENV_NAME.JS_NODE: "letterQueue"
+    }
+
     ENV_COVERCODE = {
-        "python_2": cover,
-        "python_3": cover,
-        "javascript": None
+        ENV_NAME.PYTHON: covercodes.py_tuple,
     }
     CALLED_REPRESENTATIONS = {
-        "python_2": representations.py_tuple_representation,
-        "python_3": representations.py_tuple_representation,
-        "javascript": representations.py_tuple_representation,
+        ENV_NAME.PYTHON: representations.py_tuple_representation,
     }

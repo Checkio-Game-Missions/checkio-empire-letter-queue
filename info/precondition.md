@@ -1,6 +1,6 @@
 **Precondition:**
 
-```python
-0 <= len(commands) <= 30
-all(re.match("\APUSH [A-Z]\Z", c) or re.match("\APOP\Z", c) for c in commands)
-```
+
+`0 ≤ |commands| ≤ 30`
+
+All commands match with `"\APUSH [A-Z]\Z"` or `"\APOP\Z"` regexp expression.
