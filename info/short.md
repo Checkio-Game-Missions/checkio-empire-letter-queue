@@ -1,1 +1,1 @@
-First In, First Out. Next!
+First in, first out. Next!
