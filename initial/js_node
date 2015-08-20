@@ -12,4 +12,6 @@ if (!global.is_checking) {
     assert.equal(letterQueue(["POP", "POP"]), "", "Pop, Pop, empty");
     assert.equal(letterQueue(["PUSH H", "PUSH I"]), "HI", "Hi!");
     assert.equal(letterQueue([]), "", "Nothing");
+    console.log("All set? Click 'Check' to review your code and earn rewards!");
 }
+
