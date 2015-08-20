@@ -8,3 +8,5 @@ if __name__ == '__main__':
     assert letter_queue(("POP", "POP")) == "", "Pop, Pop, empty"
     assert letter_queue(("PUSH H", "PUSH I")) == "HI", "Hi!"
     assert letter_queue(()) == "", "Nothing"
+
+    print("All done? Earn rewards by using the 'Check' button!")
